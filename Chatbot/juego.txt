@@ -1,0 +1,89 @@
+initial: Buenos dias. Soy una chatbot presumida y hoy te ayudare a elegir el conjunto perfecto para la ocasion.¿Que quiere llevar hoy?
+final: Encantada de hablar con alguien tan simpatico. Vuelva a entrar cuando quiera.
+quit: bye
+quit: gracias
+quit: adios
+quit: quit
+pre: dias dia mañana matin
+pre: tardes tarde tarda
+pre: buenos buen bon
+pre: buenas buena bona
+pre: tu tu
+pre: perdon perdone perdona
+pre: quiero deseo deme dame
+post: yo tu
+post: tu yo
+post: usted yo
+post: mi tu
+synon: quiero deseo deme
+
+key: xnone
+  decomp: *
+    reasmb: Lo que me dice no me interesa.
+    reasmb: De verdad que usted no dice nada que merezca la pena.
+key: perdon
+  decomp: *
+    reasmb: Nada hombre, siga.
+    reasmb: Que no pasa nada.
+    reasmb: No se preocupe. Todos nos equivocamos 
+
+key: chandal
+  decomp: *
+    reasmb: ¿A que va a jugar?
+    
+key: no
+  decomp: *
+    reasmb: Sinceramente creo que Vd. no necesita llevar un chandal
+  decomp: no * jugar a *
+    reasmb: Sinceramente creo que Vd. no necesita llevar un chandal
+    reasmb: Escuchese por un momento, porque quiere llevar un chandal si va a jugar con muniecas
+    reasmb: De que talla quiere el chandal
+  decomp: no * quiero un *
+    reasmb: Sinceramente creo que Vd. no necesita un chandal
+    reasmb: Escuchese por un momento, porque quiere llevar un chandal si va a jugar con muniecas
+    reasmb: De que talla quiere el chandal
+  decomp: no * deme un *
+    reasmb: Sinceramente creo que Vd. no necesita un chandal
+    reasmb: Escuchese por un momento, porque quiere llevar un chandal si va a jugar con muniecas
+    reasmb: De que talla quiere el chandal
+    
+key: jugar 9
+  decomp: * pingpong *
+    reasmb: ¿No es un poco mayor para jugar con muniecos?
+    reasmb: ¿No prefiere ponerse algo menos sport?
+    reasmb: Yo creo que lo mejor es algo casual como una bonita blusa y unos vaqueros. ¿Le gusta?
+  decomp: * ping-pong *
+    reasmb: ¿No es un poco mayor para jugar con las pinypon?
+    reasmb: ¿No prefiere ponerse algo menos sport?
+    reasmb: Yo creo que lo mejor es algo casual como una bonita blusa y unos vaqueros. ¿Le gusta?
+    
+key: pesado 8
+  decomp: * jugar a *
+    reasmb: Sinceramente creo que Vd. no necesita llevar un chandal
+    reasmb: Escuchese por un momento, porque quiere llevar un chandal si va a jugar con las pinypon
+  
+  decomp: * quiero un *
+    reasmb: Sinceramente creo que Vd. no necesita un chandal
+    reasmb: Escuchese por un momento, porque quiere llevar un chandal si va a jugar con con las pinypon
+    reasmb: De que talla quiere el chandal
+    
+  decomp: * deme un *
+    reasmb: Sinceramente creo que Vd. no necesita un chandal
+    reasmb: Escuchese por un momento, porque quiere llevar un chandal si va a jugar con con las pinypon
+    reasmb: De que talla quiere el chandal
+    
+key: deseo 7
+  decomp: * pingpong *
+    reasmb: No querra decir que quiere jugar al ping-pong
+    key: si
+      decomp: *
+        reasmb: Ah, entonces creo que un chandal es una buena opcion. ¿De que talla quiere el chandal?
+        key: mediano
+           decomp: *
+              reasmb: Aqui tiene, buena suerte en el partido
+key: dia 3
+  decomp: * dia *
+    reasmb: Buenas tardes.
+key: tarde 3
+  decomp: * tarde *
+    reasmb: Buenos dias
